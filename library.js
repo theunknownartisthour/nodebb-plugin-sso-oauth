@@ -42,7 +42,7 @@
 			oauth2: {
 				authorizationURL: ghosturl+'/ghost/api/v0.1/users/me/',
 				tokenURL: ghosturl+'/ghost/api/v0.1/authentication/token',
-				clientID: '',
+				clientID: 'ghost-admin',
 				clientSecret: ''
 			},
 			userRoute: ''	// This is the address to your app's "user profile" API endpoint (expects JSON)
