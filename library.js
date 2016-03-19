@@ -27,9 +27,11 @@
 		winston = module.parent.require('winston'),
 		async = module.parent.require('async'),
 
+		ghosturl = '',
+
 		constants = Object.freeze({
-			type: '',	// Either 'oauth' or 'oauth2'
-			name: '',	// Something unique to your OAuth provider in lowercase, like "github", or "nodebb"
+			type: 'oauth2',	// Either 'oauth' or 'oauth2'
+			name: 'ghost',	// Something unique to your OAuth provider in lowercase, like "github", or "nodebb"
 			oauth: {
 				requestTokenURL: '',
 				accessTokenURL: '',
@@ -38,8 +40,8 @@
 				consumerSecret: ''
 			},
 			oauth2: {
-				authorizationURL: '',
-				tokenURL: '',
+				authorizationURL: ghosturl+'/ghost/api/v0.1/users/me/',
+				tokenURL: ghosturl+'/ghost/api/v0.1/authentication/token',
 				clientID: '',
 				clientSecret: ''
 			},
